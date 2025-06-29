@@ -9,9 +9,6 @@ load_dotenv()
 
 # ------------------ LOGO ------------------
 logo = Image.open("graniteguard.png")
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    st.image(logo, width=150)
 
 # -------------- CONFIGURATION -------------
 API_KEY = os.getenv("API_KEY")
@@ -89,9 +86,10 @@ Text:
 
 # -------------------- STREAMLIT UI --------------------
 st.set_page_config(page_title="GraniteGuard – AI Ethics Auditor", layout="wide")
-st.sidebar.title("🛡️ GraniteGuard")
-st.sidebar.markdown("Powered by IBM Granite via watsonx.ai")
-
+with st.sidebar:
+    st.image(logo, use_column_width=True)
+    st.title("🛡️ GraniteGuard")
+    st.caption("Powered by IBM Granite via watsonx.ai")
 st.title("📊 Real-Time AI Ethics Auditor")
 st.markdown("Analyze business messages for **bias, tone issues**, and **legal risk** – and instantly rewrite them safely.")
 
