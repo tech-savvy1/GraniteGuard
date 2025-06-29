@@ -87,13 +87,12 @@ Text:
 # -------------------- STREAMLIT UI --------------------
 st.set_page_config(page_title="GraniteGuard – AI Ethics Auditor", layout="wide")
 with st.sidebar:
-    st.image(logo, use_column_width=True)
-    st.title("🛡️ GraniteGuard")
+    st.image(logo, use_container_width=True)
     st.caption("Powered by IBM Granite via watsonx.ai")
 st.title("📊 Real-Time AI Ethics Auditor")
 st.markdown("Analyze business messages for **bias, tone issues**, and **legal risk** – and instantly rewrite them safely.")
 
-user_input = st.text_area("✍️ Paste your business message here:", height=200)
+user_input = st.text_area("Paste your business message here:", height=200)
 
 col1, col2 = st.columns(2)
 
