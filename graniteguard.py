@@ -88,8 +88,9 @@ Text:
 st.set_page_config(page_title="GraniteGuard – AI Ethics Auditor", layout="wide")
 with st.sidebar:
     st.image(logo, use_container_width=True)
-    st.caption("Powered by IBM Granite via watsonx.ai")
-st.title("📊 Real-Time AI Ethics Auditor")
+    st.caption("Powered by IBM Granite")
+    st.caption("via watsonx.ai")
+st.title("Real-Time AI Ethics Auditor")
 st.markdown("Analyze business messages for **bias, tone issues**, and **legal risk** – and instantly rewrite them safely.")
 
 user_input = st.text_area("Paste your business message here:", height=200)
@@ -97,20 +98,20 @@ user_input = st.text_area("Paste your business message here:", height=200)
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("🔍 Analyze with Granite"):
+    if st.button("Analyze with Granite"):
         if not user_input.strip():
             st.warning("Please enter some text.")
         else:
             with st.spinner("Analyzing for risks..."):
                 try:
                     report = analyze_risks(user_input)
-                    st.subheader("📋 AI Ethics Audit Report")
+                    st.subheader("AI Ethics Audit Report")
                     st.code(report)
                 except Exception as e:
                     st.error(f"Error during analysis: {e}")
 
 with col2:
-    if st.button("✍️ Rewrite to Fix"):
+    if st.button("Rewrite to Fix"):
         if not user_input.strip():
             st.warning("Please enter some text.")
         else:
