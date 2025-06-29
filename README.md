@@ -51,5 +51,5 @@ GraniteGuard solves this with **real-time auditing** and **automatic rewriting**
 1. Clone the repo
 
 ```bash
-git clone https://github.com/LK/graniteguard.git
+git clone https://github.com/tech-savvy1/GraniteGuard.git
 cd graniteguard
