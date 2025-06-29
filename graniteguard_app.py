@@ -1,12 +1,16 @@
 import streamlit as st
 import requests
 import time
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # --------------🔐 CONFIGURATION -------------
-API_KEY = "7FmhCjLTF877RTJWf1OvF6Mk8H5Jycawq_iAteDJEdkw"
-PROJECT_ID = "ee27b174-b042-4f8e-9701-bec1d225530a"
-REGION = "us-south"
-MODEL_ID = "ibm/granite-3-3-8b-instruct"
+API_KEY = os.getenv("API_KEY")
+PROJECT_ID = os.getenv("PROJECT_ID")
+REGION = os.getenv("REGION")
+MODEL_ID = os.getenv("MODEL_ID")
 
 # -------------------- GET TOKEN --------------------
 @st.cache_data(ttl=3000)
