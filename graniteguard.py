@@ -88,8 +88,14 @@ Text:
 st.set_page_config(page_title="GraniteGuard – AI Ethics Auditor", layout="wide")
 with st.sidebar:
     st.image(logo, use_container_width=True)
-    st.caption("Powered by IBM Granite")
-    st.caption("via watsonx.ai")
+    st.markdown(
+        """
+        <div style='text-align: center; font-size: 13px; line-height: 1.4em; margin-top: -10px;'>
+            <strong>Powered by IBM Granite via watsonx.ai</strong><br>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 st.title("Real-Time AI Ethics Auditor")
 st.markdown("Analyze business messages for **bias, tone issues**, and **legal risk** – and instantly rewrite them safely.")
 
