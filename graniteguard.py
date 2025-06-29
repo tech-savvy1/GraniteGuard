@@ -3,10 +3,17 @@ import requests
 import time
 from dotenv import load_dotenv
 import os
+from PIL import Image
 
 load_dotenv()
 
-# --------------🔐 CONFIGURATION -------------
+# ------------------ LOGO ------------------
+logo = Image.open("graniteguard.png")
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image(logo, width=150)
+
+# -------------- CONFIGURATION -------------
 API_KEY = os.getenv("API_KEY")
 PROJECT_ID = os.getenv("PROJECT_ID")
 REGION = os.getenv("REGION")
