@@ -1,8 +1,14 @@
-# 🛡️ GraniteGuard – AI Ethics Auditor for Enterprise Communication
+
+![Web App](GraniteGuard.png) # 🛡️ GraniteGuard – AI Ethics Auditor for Enterprise Communication
 
 GraniteGuard is an AI-powered assistant that helps organizations detect and eliminate **bias**, **tone issues**, and **legal risks** from business communications using **IBM’s Granite language models** via watsonx.ai.
 
 Whether it's a job description, HR policy, customer support response, or legal statement — GraniteGuard ensures your content is **inclusive**, **compliant**, and **professional**.
+
+---
+
+![Web App](GraniteGuard1.png)
+![Web App](GraniteGuard2.png)
 
 ---
 
